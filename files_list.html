@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Download</title>
+</head>
+<body>
+<h1>Directory listing</h1>
+<hr>
+<u1>
+    {%  for file in files %}
+        {%  if isdir_list[loop.index0] %}
+            <li><a href="{{file + '\\'}}">{{file + '\\'}}</a></li>
+        {% else %}
+            <li><a href="{{ file }}">{{ file }}</a></li>
+        {% endif %}
+    {% endfor %}
+</u1>
+</body>
+</html>
